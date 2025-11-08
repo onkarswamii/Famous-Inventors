@@ -1,0 +1,214 @@
+:root {
+    --color-text-primary: #333333;
+    --color-text-secondary: #666666;
+    --color-background-light: #F4F4F4;
+    --color-background-card: #FFFFFF;
+    --color-accent-blue: #007bff;
+    --spacing-small: 1rem;
+    --spacing-medium: 2rem;
+    --spacing-large: 3rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--color-text-primary);
+    background-color: var(--color-background-light);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-medium);
+}
+
+a {
+    color: var(--color-text-primary);
+    text-decoration: none;
+}
+
+h1 { font-size: 1.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+
+.site-header {
+    background-color: var(--color-background-card);
+    border-bottom: 1px solid #ddd;
+    padding: 1rem var(--spacing-medium);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header h1 {
+    font-weight: bold;
+}
+
+.site-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--spacing-medium);
+}
+
+.site-header nav a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    transition: color 0.3s;
+}
+
+.site-header nav a:hover {
+    color: var(--color-accent-blue);
+}
+
+.hero {
+    text-align: center;
+    padding: var(--spacing-large) 0 5rem 0;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+}
+
+
+.about-section {
+    padding-bottom: var(--spacing-large);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 4rem;
+    padding: var(--spacing-large) var(--spacing-medium);
+}
+
+.about-text h2 {
+    margin-bottom: var(--spacing-medium);
+    font-weight: 600;
+}
+
+.top-inventions {
+    background-color: var(--color-background-card);
+    padding: var(--spacing-medium);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.top-inventions h3 {
+    margin-bottom: var(--spacing-small);
+    font-weight: 600;
+}
+
+.top-inventions ol {
+    padding-left: 1.5rem;
+}
+
+.top-inventions li {
+    margin-bottom: 0.5rem;
+    color: var(--color-text-secondary);
+}
+
+
+.inventor-showcase {
+    background-color: var(--color-background-light);
+    padding: 0 0 var(--spacing-large) 0;
+}
+
+.inventor-card {
+    background-color: var(--color-background-card);
+    margin-bottom: var(--spacing-medium);
+    padding: var(--spacing-medium);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    
+
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-large);
+}
+
+.inventor-card img {
+    width: 200px; 
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0; 
+}
+
+.inventor-details {
+    flex-grow: 1;
+}
+
+.inventor-details h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.inventor-details p.major-inventions {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: var(--color-text-primary);
+}
+
+
+
+.site-footer {
+    background-color: var(--color-text-primary); 
+    color: #ffffff;
+    padding: var(--spacing-medium) 0;
+    text-align: center;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.site-footer p {
+    color: #cccccc;
+}
+
+
+@media (max-width: 900px) {
+  
+   .about-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-medium);
+    }
+}
+
+@media (max-width: 700px) {
+   .inventor-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--spacing-medium);
+    }
+    
+   .inventor-card img {
+        width: 100%; 
+        max-width: 300px;
+    }
+    
+   .site-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+   .site-header nav ul {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}
